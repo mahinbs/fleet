@@ -23,7 +23,7 @@ export default function Dashboard() {
     {
       id: '0328-AW-05',
       model: 'HARRIER',
-      image: 'https://readdy.ai/api/search-image?query=Red%20sedan%20car%2C%20luxury%20vehicle%2C%20modern%20automotive%20design%2C%20side%20view%2C%20clean%20white%20background%2C%20realistic%203D%20rendering%2C%20professional%20car%20photography%2C%20high%20detail&width=80&height=60&seq=car1&orientation=landscape',
+      image: 'https://res.cloudinary.com/dknafpppp/image/upload/v1758730781/istockphoto-468686480-612x612_qlim26.jpg',
       location: 'Avenue de Molundu, Industriel, Industriel, Ville de Lubumbashi, Kimbangu, Haut-Katanga, Democratic Republic of the Congo',
       lastUpdated: '22/08/2025 15:52:25',
       todayKm: '8 km',
@@ -36,7 +36,7 @@ export default function Dashboard() {
     {
       id: '0524-AW-05',
       model: 'alphard',
-      image: 'https://readdy.ai/api/search-image?query=Red%20minivan%20MPV%20vehicle%2C%20family%20car%2C%20modern%20design%2C%20side%20view%2C%20clean%20white%20background%2C%20realistic%203D%20rendering%2C%20professional%20car%20photography%2C%20high%20detail&width=80&height=60&seq=car2&orientation=landscape',
+      image: 'https://res.cloudinary.com/dknafpppp/image/upload/v1758730519/ChatGPT_Image_Sep_24_2025_11_14_08_PM_hmcyq1.png',
       location: 'Avenue Jason Sendwe, Lubumbashi, Ville de Lubumbashi, Luvua, Haut-Katanga, Democratic Republic of the Congo',
       lastUpdated: '22/08/2025 15:52:15',
       todayKm: '11 km',
@@ -50,7 +50,7 @@ export default function Dashboard() {
     {
       id: '8086-AT-05',
       model: 'Harrier',
-      image: 'https://readdy.ai/api/search-image?query=Red%20luxury%20sedan%20car%2C%20premium%20vehicle%2C%20modern%20automotive%20design%2C%20side%20view%2C%20clean%20white%20background%2C%20realistic%203D%20rendering%2C%20professional%20car%20photography%2C%20high%20detail&width=80&height=60&seq=car3&orientation=landscape',
+      image: 'https://res.cloudinary.com/dknafpppp/image/upload/v1758730781/istockphoto-468686480-612x612_qlim26.jpg',
       location: 'Avenue de Molundu, Industriel, Industriel, Ville de Lubumbashi, Kimbangu, Haut-Katanga, Democratic Republic of the Congo',
       lastUpdated: '22/08/2025 15:50:27',
       todayKm: '17 km',
@@ -64,7 +64,7 @@ export default function Dashboard() {
     {
       id: 'QWA2',
       model: '',
-      image: 'https://readdy.ai/api/search-image?query=Red%20SUV%20vehicle%2C%20off-road%20car%2C%20rugged%20design%2C%20side%20view%2C%20clean%20white%20background%2C%20realistic%203D%20rendering%2C%20professional%20car%20photography%2C%20high%20detail&width=80&height=60&seq=car4&orientation=landscape',
+      image: 'https://res.cloudinary.com/dknafpppp/image/upload/v1758731111/istockphoto-170110040-612x612_onlfxm.jpg',
       location: 'Avenue Usoke, Kigoma, Ville de Lubumbashi, Rail I, Haut-Katanga, Democratic Republic of the Congo',
       lastUpdated: '22/08/2025 13:06:11',
       todayKm: '1 km',
