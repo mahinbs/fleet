@@ -1,4 +1,4 @@
-// File: C:\Users\Pranav\Downloads\fleet new\fleet new\app\layout.tsx
+// File: C:\PRANAV\VS Code\Boostmysites\SOFTWARES\fleet\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
