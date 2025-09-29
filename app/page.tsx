@@ -1566,90 +1566,379 @@ export default function Dashboard() {
 
         {activeSection === "reports" && (
           <div className="px-4">
-            <div className="bg-white/90 backdrop-blur-md rounded-lg p-6 shadow-sm border border-white/60">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">
-                Reports & Analytics
-              </h2>
-              <div className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <div className="text-sm font-medium text-purple-900">
-                      Monthly Distance
+            {/* Animated Background Particles for Reports */}
+            <div className="fixed inset-0 pointer-events-none overflow-hidden">
+              <div className="absolute top-20 left-20 w-3 h-3 bg-purple-400 rounded-full animate-ping opacity-30"></div>
+              <div className="absolute top-40 right-30 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-40"></div>
+              <div className="absolute bottom-40 left-40 w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse opacity-35"></div>
+              <div className="absolute bottom-20 right-20 w-2.5 h-2.5 bg-orange-400 rounded-full animate-ping opacity-25"></div>
+              <div className="absolute top-60 left-60 w-1 h-1 bg-indigo-400 rounded-full animate-bounce opacity-30"></div>
+            </div>
+
+            {/* Enhanced Reports Header */}
+            <div className="bg-white/90 backdrop-blur-md rounded-lg p-6 shadow-sm border border-white/60 mb-6 relative overflow-hidden group hover:shadow-xl transition-all duration-500">
+              {/* Animated Background Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-blue-50/20 to-green-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              <div className="flex items-center justify-between relative z-10">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg animate-pulse">
+                      <i className="ri-bar-chart-line text-white text-xl"></i>
                     </div>
-                    <div className="text-2xl font-bold text-purple-600">
-                      1,247 km
+                    <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold text-gray-900">
+                      Reports & Analytics
+                    </h2>
+                    <p className="text-sm text-gray-600">
+                      Comprehensive fleet insights and performance metrics
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="bg-green-100 px-3 py-1 rounded-full relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="text-green-700 text-sm font-medium relative z-10 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      Live Data
+                    </span>
+                  </div>
+                  <div className="bg-blue-50 px-3 py-1 rounded-full relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <span className="text-blue-700 text-sm font-medium relative z-10 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                      Real-time
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Analytics Dashboard */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+              {/* Key Metrics Cards */}
+              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div 
+                  onClick={() => alert('View detailed distance analytics - Feature coming soon!')}
+                  className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 relative overflow-hidden group hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="flex items-center justify-between mb-4 relative z-10">
+                    <div className="relative">
+                      <i className="ri-road-map-line text-3xl text-purple-500 group-hover:animate-bounce"></i>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400 rounded-full animate-ping opacity-60"></div>
                     </div>
-                    <div className="text-xs text-purple-500 mt-1">
-                      +12% vs last month
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-purple-700">Monthly Distance</div>
+                      <div className="text-3xl font-bold text-purple-800">1,247 km</div>
+                      <div className="text-xs text-purple-600 flex items-center gap-1">
+                        <i className="ri-arrow-up-line text-green-500"></i>
+                        +12% vs last month
+                      </div>
                     </div>
                   </div>
-                  <div className="bg-indigo-50 p-4 rounded-lg">
-                    <div className="text-sm font-medium text-indigo-900">
-                      Fuel Cost
+                  <div className="w-full bg-purple-200 rounded-full h-2 relative z-10">
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full animate-pulse" style={{ width: "85%" }}></div>
+                  </div>
+                </div>
+
+                <div 
+                  onClick={() => alert('View detailed fuel cost analytics - Feature coming soon!')}
+                  className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl border border-indigo-200 relative overflow-hidden group hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="flex items-center justify-between mb-4 relative z-10">
+                    <div className="relative">
+                      <i className="ri-money-dollar-circle-line text-3xl text-indigo-500 group-hover:animate-pulse"></i>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-indigo-400 rounded-full animate-ping opacity-60"></div>
                     </div>
-                    <div className="text-2xl font-bold text-indigo-600">
-                      $89.50
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-indigo-700">Fuel Cost</div>
+                      <div className="text-3xl font-bold text-indigo-800">$89.50</div>
+                      <div className="text-xs text-indigo-600 flex items-center gap-1">
+                        <i className="ri-arrow-down-line text-green-500"></i>
+                        -5% vs last month
+                      </div>
                     </div>
-                    <div className="text-xs text-indigo-500 mt-1">
-                      -5% vs last month
+                  </div>
+                  <div className="w-full bg-indigo-200 rounded-full h-2 relative z-10">
+                    <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 h-2 rounded-full animate-pulse" style={{ width: "72%" }}></div>
+                  </div>
+                </div>
+
+                <div 
+                  onClick={() => alert('View efficiency analytics - Feature coming soon!')}
+                  className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 relative overflow-hidden group hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="flex items-center justify-between mb-4 relative z-10">
+                    <div className="relative">
+                      <i className="ri-speed-line text-3xl text-green-500 group-hover:animate-spin"></i>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-ping opacity-60"></div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-green-700">Efficiency Rate</div>
+                      <div className="text-3xl font-bold text-green-800">92.5%</div>
+                      <div className="text-xs text-green-600 flex items-center gap-1">
+                        <i className="ri-arrow-up-line text-green-500"></i>
+                        +8% vs last month
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full bg-green-200 rounded-full h-2 relative z-10">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full animate-pulse" style={{ width: "92%" }}></div>
+                  </div>
+                </div>
+
+                <div 
+                  onClick={() => alert('View maintenance analytics - Feature coming soon!')}
+                  className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 relative overflow-hidden group hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="flex items-center justify-between mb-4 relative z-10">
+                    <div className="relative">
+                      <i className="ri-tools-line text-3xl text-orange-500 group-hover:animate-bounce"></i>
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full animate-ping opacity-60"></div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-orange-700">Maintenance</div>
+                      <div className="text-3xl font-bold text-orange-800">78%</div>
+                      <div className="text-xs text-orange-600 flex items-center gap-1">
+                        <i className="ri-arrow-down-line text-red-500"></i>
+                        -3% vs last month
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full bg-orange-200 rounded-full h-2 relative z-10">
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full animate-pulse" style={{ width: "78%" }}></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Performance Overview */}
+              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/60 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-purple-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                <div className="flex items-center gap-3 mb-6 relative z-10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i className="ri-dashboard-3-line text-white text-sm"></i>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800">Performance Overview</h3>
+                </div>
+
+                <div className="space-y-4 relative z-10">
+                  <div className="flex items-center justify-between group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-300">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-gradient-to-br from-green-500 to-green-600 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-700">Efficiency Score</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-20 bg-gray-200 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full animate-pulse" style={{ width: "85%" }}></div>
+                      </div>
+                      <span className="text-sm font-bold text-gray-900">85%</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-300">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-700">Safety Score</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-20 bg-gray-200 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full animate-pulse" style={{ width: "92%" }}></div>
+                      </div>
+                      <span className="text-sm font-bold text-gray-900">92%</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between group/item hover:bg-blue-50/50 p-3 rounded-lg transition-colors duration-300">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-700">Maintenance Score</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-20 bg-gray-200 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full animate-pulse" style={{ width: "78%" }}></div>
+                      </div>
+                      <span className="text-sm font-bold text-gray-900">78%</span>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="text-sm font-medium text-gray-900 mb-3">
-                    Performance Summary
+              </div>
+            </div>
+
+            {/* Enhanced Analytics Charts */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              {/* Fleet Performance Chart */}
+              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/60 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                <div className="flex items-center gap-3 mb-6 relative z-10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i className="ri-line-chart-line text-white text-sm"></i>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">
-                        Efficiency Score
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-green-500 h-2 rounded-full"
-                            style={{ width: "85%" }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-medium text-gray-900">
-                          85%
-                        </span>
+                  <h3 className="text-lg font-semibold text-gray-800">Fleet Performance Trend</h3>
+                </div>
+
+                <div className="relative z-10">
+                  <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 relative overflow-hidden">
+                    {/* Animated Chart Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 to-blue-100/30 opacity-50"></div>
+                    
+                    {/* Simulated Chart Lines */}
+                    <div className="relative h-full">
+                      <div className="absolute bottom-4 left-4 w-full h-32 border-l-2 border-b-2 border-gray-300"></div>
+                      
+                      {/* Performance Line */}
+                      <div className="absolute bottom-4 left-4 w-full h-32">
+                        <svg className="w-full h-full" viewBox="0 0 200 100">
+                          <path
+                            d="M 10 80 Q 50 60 90 40 T 170 20"
+                            stroke="url(#gradient1)"
+                            strokeWidth="3"
+                            fill="none"
+                            className="animate-pulse"
+                          />
+                          <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stopColor="#10b981" />
+                              <stop offset="100%" stopColor="#3b82f6" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
                       </div>
+                      
+                      {/* Data Points */}
+                      <div className="absolute bottom-4 left-4 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+                      <div className="absolute bottom-8 left-12 w-3 h-3 bg-blue-500 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
+                      <div className="absolute bottom-12 left-20 w-3 h-3 bg-purple-500 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">
-                        Safety Score
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-blue-500 h-2 rounded-full"
-                            style={{ width: "92%" }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-medium text-gray-900">
-                          92%
-                        </span>
-                      </div>
+                  </div>
+                  
+                  <div className="mt-4 grid grid-cols-3 gap-4 text-center">
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">92%</div>
+                      <div className="text-xs text-green-700">Current</div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700">
-                        Maintenance Score
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-16 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-yellow-500 h-2 rounded-full"
-                            style={{ width: "78%" }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-medium text-gray-900">
-                          78%
-                        </span>
-                      </div>
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600">88%</div>
+                      <div className="text-xs text-blue-700">Average</div>
+                    </div>
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-600">95%</div>
+                      <div className="text-xs text-purple-700">Peak</div>
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Vehicle Status Distribution */}
+              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/60 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 to-pink-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                
+                <div className="flex items-center gap-3 mb-6 relative z-10">
+                  <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <i className="ri-pie-chart-line text-white text-sm"></i>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800">Vehicle Status Distribution</h3>
+                </div>
+
+                <div className="relative z-10">
+                  <div className="h-48 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-4 relative overflow-hidden">
+                    {/* Animated Pie Chart Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-100/30 to-pink-100/30 opacity-50"></div>
+                    
+                    {/* Simulated Pie Chart */}
+                    <div className="relative h-full flex items-center justify-center">
+                      <div className="w-32 h-32 rounded-full border-8 border-green-200 relative animate-spin" style={{ animationDuration: '10s' }}>
+                        <div className="absolute inset-0 rounded-full border-8 border-blue-200 transform rotate-45"></div>
+                        <div className="absolute inset-0 rounded-full border-8 border-yellow-200 transform rotate-90"></div>
+                        <div className="absolute inset-0 rounded-full border-8 border-red-200 transform rotate-135"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm text-gray-700">Active (65%)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                      <span className="text-sm text-gray-700">Idle (25%)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-yellow-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                      <span className="text-sm text-gray-700">Maintenance (8%)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                      <span className="text-sm text-gray-700">Offline (2%)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Enhanced Action Buttons */}
+            <div className="bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-md rounded-xl p-6 shadow-xl border border-white/60 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-green-50/10 to-purple-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              <div className="flex items-center gap-3 mb-6 relative z-10">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <i className="ri-download-line text-white text-sm"></i>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800">Export & Actions</h3>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+                <button 
+                  onClick={() => alert('Export PDF Report - Feature coming soon!')}
+                  className="flex flex-col items-center gap-3 p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-xl hover:from-red-100 hover:to-red-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer group border border-red-200"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <i className="ri-file-pdf-line text-2xl text-white"></i>
+                  </div>
+                  <span className="font-semibold text-red-800 group-hover:text-red-900 transition-colors duration-300">Export PDF</span>
+                  <span className="text-xs text-red-600 text-center">Download report</span>
+                </button>
+                
+                <button 
+                  onClick={() => alert('Export Excel Report - Feature coming soon!')}
+                  className="flex flex-col items-center gap-3 p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl hover:from-green-100 hover:to-green-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer group border border-green-200"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <i className="ri-file-excel-line text-2xl text-white"></i>
+                  </div>
+                  <span className="font-semibold text-green-800 group-hover:text-green-900 transition-colors duration-300">Export Excel</span>
+                  <span className="text-xs text-green-600 text-center">Download data</span>
+                </button>
+                
+                <button 
+                  onClick={() => alert('Schedule Report - Feature coming soon!')}
+                  className="flex flex-col items-center gap-3 p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl hover:from-blue-100 hover:to-blue-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer group border border-blue-200"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <i className="ri-calendar-line text-2xl text-white"></i>
+                  </div>
+                  <span className="font-semibold text-blue-800 group-hover:text-blue-900 transition-colors duration-300">Schedule</span>
+                  <span className="text-xs text-blue-600 text-center">Auto reports</span>
+                </button>
+                
+                <button 
+                  onClick={() => alert('Share Report - Feature coming soon!')}
+                  className="flex flex-col items-center gap-3 p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl hover:from-purple-100 hover:to-purple-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer group border border-purple-200"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                    <i className="ri-share-line text-2xl text-white"></i>
+                  </div>
+                  <span className="font-semibold text-purple-800 group-hover:text-purple-900 transition-colors duration-300">Share</span>
+                  <span className="text-xs text-purple-600 text-center">Send report</span>
+                </button>
               </div>
             </div>
           </div>
